@@ -116,10 +116,13 @@ function getChoice() {
         2 - Show last contact;
         3 - Show all contacts;
         4 - Add a new contact;
-        5 - Exit the program;`));
+        5 - Sort contacts by name;
+        6 - Sort contacts by phone;
+        7 - Sort contacts by email;
+        8 - Exit the program;`));
         
-        if (Number.isNaN(choice) || choice < 1 || choice > 5) {
-            alert('Please select a valid option (1-5)');
+        if (Number.isNaN(choice) || choice < 1 || choice > 8) {
+            alert('Please select a valid option (1-8)');
             continue;
         };
         
@@ -128,6 +131,11 @@ function getChoice() {
     };
     
     return choice;
+};
+
+function sortContacts(criteria) {
+    contacts.sort((a,b) => a[criteria].localeCompare(b[criteria]));
+    alert(`Contacts sorted by ${criteria}.`);
 };
 
 function actionChoice(choice) {
@@ -146,12 +154,21 @@ function actionChoice(choice) {
         case 4:
             addNewContact();
             break;
+        case 5:
+            sortContacts('name');
+            break;
+        case 6:
+            sortContacts('phone');
+            break;
+        case 7:
+            sortContacts('email');
+            break;
     };
 };
 
 let startProgram = getChoice();
 
-while (startProgram !== 5) {
+while (startProgram !== 8) {
     actionChoice(startProgram);
     startProgram = getChoice();
 };
