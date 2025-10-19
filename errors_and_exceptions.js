@@ -13,7 +13,7 @@ for (let i = 0; i < numbers.length; i++) {
     
     try {
         result = div(1000, numbers[i]);
-    } catch (error ) {
+    } catch (error) {
         result = error.message;
     };
     
