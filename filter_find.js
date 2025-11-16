@@ -97,8 +97,8 @@ const pedidos = [
 const ordersAna = pedidos.filter(orders => orders.cliente === 'Ana');
 console.log(ordersAna);
 // 2. Primeiro pedido pendente
-const firstPendentOrder = pedidos.find(order => order.status === 'pendente');
-console.log(firstPendentOrder);
+const firstPendingOrder = pedidos.find(order => order.status === 'pendente');
+console.log(firstPendingOrder);
 // 3. Pedidos com valor acima de R$ 100
 const OrdersGreaterThan100 = pedidos.filter(order => order.valor > 100);
 console.log(OrdersGreaterThan100);
