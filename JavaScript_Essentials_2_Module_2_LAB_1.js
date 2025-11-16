@@ -31,7 +31,7 @@ class User {
   };
   
   sendEmail (from, to, message) {
-    let newMessage = `${from} -> ${to}: ${message}`;
+    let newMessage = `${to} -> ${from}: ${message}`;
     this.messages.push(newMessage);
   };
   
