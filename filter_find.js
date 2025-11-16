@@ -102,3 +102,28 @@ console.log(firstPendingOrder);
 // 3. Pedidos com valor acima de R$ 100
 const OrdersGreaterThan100 = pedidos.filter(order => order.valor > 100);
 console.log(OrdersGreaterThan100);
+
+/// Desafios
+
+const products = [
+  { id: 1, name: "Laptop", price: 1000, category: "electronics" },
+  { id: 2, name: "Phone", price: 500, category: "electronics" },
+  { id: 3, name: "Book", price: 20, category: "education" }
+];
+
+// Use find para encontrar um produto e depois modifique seu preço
+let prodToFind = 'laptop'
+let priceToUpdate = 5;
+const findProd = products.find(item => item.name.toLowerCase() === prodToFind);
+if (findProd) {
+  console.log(`${findProd.name} price: ${findProd.price}.`);
+  findProd.price = priceToUpdate;
+  console.log(`Price of ${findProd.name} updated to ${findProd.price}.`);
+};
+// Use filter para criar uma lista só com nomes dos produtos
+const prodNames = products.map(item => item.name);
+console.log(prodNames);
+// Filtre os produtos da categoria "electronics" e depois extraia os nomes
+const electronicProds = products.filter(item => item.category === 'electronics');
+const electronicNames = electronicProds.map(item => item.name);
+console.log(electronicNames);
