@@ -11,3 +11,4 @@ Códigos que estou criando durante meus estudos de programação.
 - `JavaScript_Essentials_2_Module_1__LAB_5.js` - Edube - JavaScript Essentials 2
 - `JavaScript_Essentials_2_Module_1__LAB_3.js` - Edube - JavaScript Essentials 2
 - `JavaScript_Essentials_2_Module_1__LAB_2.js` - Edube - JavaScript Essentials 2
+- `estudos_comparar_objetos.js` - Estudos para comparação entre objetos
